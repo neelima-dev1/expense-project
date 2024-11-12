@@ -51,7 +51,7 @@ VALIDATE $? "Strated MySQL Server"
      mysql_secure_installation --set-root-pass ExpenseApp@1
      VALIDATE $? "Setting up root password"
  else
-    echo "MySQL root password is already setup ...$Y SKIPPING $N" | tee -a
+    echo -e "MySQL root password is already setup ...$Y SKIPPING $N" | tee -a
 fi
     
 
