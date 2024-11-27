@@ -47,11 +47,11 @@ VALIDATE $? "Strated MySQL Server"
 
  if [ $? -ne 0 ]
  then
-     echo "MySQL root password is not setup, setting now"
+     echo "MySQL root password is not setup, setting now" &>>$LOG_FILE 
      mysql_secure_installation --set-root-pass ExpenseApp@1
      VALIDATE $? "Setting up root password"
  else
-    echo -e "MySQL root password is already setup ...$Y SKIPPING $N" | tee -a
+    echo -e "MySQL root password is already setup ...$Y SKIPPING $N" | tee -a $LOG_FILE
 fi
     
 
