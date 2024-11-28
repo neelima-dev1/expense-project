@@ -66,7 +66,7 @@ VALIDATE $? "Extracting backend application code"
 
 npm install &>>$LOG_FILE
 
- cp code/home/ec2-user/expense-project/backend.service /etc/systemd/system/backend.service
+ cp /home/ec2-user/expense-project/backend.service /etc/systemd/system/backend.service
 
 #  load the data before running backend
 
